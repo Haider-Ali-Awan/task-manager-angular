@@ -11,7 +11,7 @@ export class TaskService {
   ];
 
   getTasks(): Task[] {
-    return this.tasks;
+    return this.tasks.slice().reverse();
   }
 
   addTask(task: Task) {

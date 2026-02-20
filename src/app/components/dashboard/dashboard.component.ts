@@ -14,7 +14,7 @@ import { AboutDialogueComponent } from '../about-dialogue/about-dialogue.compone
 })
 export class DashboardComponent implements OnInit {
   tasks: Task[] = [];
-
+  selectedTab: number = 0;
   constructor(private taskService: TaskService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit {
   // Form se new task add
   addTask(task: Task) {
     this.taskService.addTask(task);
+    this.selectedTab = 1;
     this.loadTasks();
   }
 
