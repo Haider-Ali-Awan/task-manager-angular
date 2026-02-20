@@ -1,0 +1,19 @@
+.edit-status-pill {
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-completed {
+    background-color: #d4edda;
+    color: #155724;
+}

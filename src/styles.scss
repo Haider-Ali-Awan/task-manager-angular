@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Poppins', sans-serif; }
+
+.snackbar-primary {
+  background-color: #30ae43 !important; /* primary blue */
+  color: white !important;               
+}
+
+.snackbar-primary .mat-simple-snackbar-action {
+  color: white !important;             /* Close button color */
+  font-weight: 600;
+}
+
+.status-pill {
+  padding: 6px 14px;
+  border-radius: 50px; /* pill shape */
+  font-size: 13px;
+  font-weight: 100;
+  display: inline-block;
+  color: white;
+}
+
+/* Pending */
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+/* Completed */
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}

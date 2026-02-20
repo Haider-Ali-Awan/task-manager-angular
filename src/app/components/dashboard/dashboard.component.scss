@@ -1,0 +1,23 @@
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* smooth animation */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* zoom in slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* subtle bigger shadow */
+    cursor: pointer;
+}
+
+.custom-toolbar {
+    background-color: #3F51B5;
+    /* yahan apna custom bg color */
+    color: white;
+}
+
+.spacer {
+    flex: 1 1 auto;
+    /* pushes the button to the right */
+}

@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>About Task Manager</h2>
+<mat-dialog-content class="mat-typography">
+    <p>This Task Manager project is built with Angular, Angular Material, and Bootstrap 5.</p>
+    <ul>
+        <li>Dashboard with task summary cards</li>
+        <li>Task list with Material cards</li>
+        <li>Add Task form with reactive validations</li>
+        <li>Edit/Delete functionality via Angular Material dialogs</li>
+        <li>Success/Error notifications with Material snackbars</li>
+    </ul>
+    <p>SCSS is used for styling dialogs, cards, and snackbars, while Bootstrap ensures a responsive layout.</p>
+    <p>Note: Tasks are not persisted on refresh; you can integrate localStorage or a backend for data persistence.</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" (click)="onClose()">Close</button>
+</mat-dialog-actions>

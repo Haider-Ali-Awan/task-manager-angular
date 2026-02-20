@@ -1,0 +1,44 @@
+<mat-toolbar class="custom-toolbar">
+  <span>Task Manager Project</span>
+  <span class="spacer"></span>
+  <button mat-raised-button color="dark" (click)="openAbout()">About Project</button>
+</mat-toolbar>
+
+<div class="container mt-4">
+  <mat-tab-group>
+    <mat-tab label="Dashboard">
+      <div class="row mb-4">
+        <h2 class="mb-4 mt-4">Dashboard</h2>
+        <div class="col-md-4">
+          <div class="card text-center shadow-sm p-3 bg-dark text-white">
+            <h5>Total Tasks</h5>
+            <p class="display-6">{{totalTasks}}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center bg-success text-white shadow-sm p-3">
+            <h5>Completed</h5>
+            <p class="display-6">{{completedTasks}}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-yellow bg-warning text-center shadow-sm p-3">
+            <h5>Pending</h5>
+            <p class="display-6">{{pendingTasks}}</p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Recent Tasks">
+      <app-task-cards *ngFor="let task of tasks" [task]="task" (edit)="editTask($event)" (delete)="deleteTask($event)">
+      </app-task-cards>
+    </mat-tab>
+    <mat-tab label="Add Task">
+      <app-task-form (saveTask)="addTask($event)"></app-task-form>
+    </mat-tab>
+  </mat-tab-group>
+
+
+
+
+</div>

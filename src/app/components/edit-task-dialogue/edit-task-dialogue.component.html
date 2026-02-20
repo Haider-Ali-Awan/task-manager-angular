@@ -1,0 +1,41 @@
+<h2 class="d-flex align-items-center" mat-dialog-title>{{task.name}}
+    <span class="edit-status-pill ms-2" [ngClass]="{
+      'status-pending': task.status === 'Pending',
+      'status-completed': task.status === 'Completed'
+    }">
+        {{ task.status }}
+    </span>
+</h2>
+<mat-dialog-content [formGroup]="form">
+
+    <mat-form-field appearance="fill" class="w-100 mt-2">
+        <mat-label>Task Name</mat-label>
+        <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-100 mt-2">
+        <mat-label>Assigned To</mat-label>
+        <input matInput formControlName="assignedTo">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-100 mt-2">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+            <mat-option value="Pending">Pending</mat-option>
+            <mat-option value="Completed">Completed</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-100 mt-2">
+        <mat-label>Due Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dueDate" readonly (click)="picker.open()">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="mt-3">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button color="primary" [disabled]="form.invalid" (click)="onSave()">Update</button>
+</mat-dialog-actions>
